@@ -1,0 +1,68 @@
+doctype html
+html
+  head
+    title login
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/main.css')
+  body
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header.page-scroll
+          button.navbar-toggle(data-target='#bs-example-navbar-collapse-1', data-toggle='collapse', type='button')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        // Collect the nav links, forms, and other content for toggling
+        // /.navbar-collapse
+      // /.container-fluid
+    section#login
+      .container
+        .row
+          .col-xs-12
+            .form-wrap
+              h1 Log in with your email account
+              form#login-form(role='form', action='/login' , method='post', autocomplete='off')
+                .form-group
+                  label.sr-only(for='email') Email
+                  input#email.form-control(type='text', name='username', placeholder='User Name')
+                .form-group
+                  label.sr-only(for='key') Password
+                  input#key.form-control(type='password', name='password', placeholder='Password')
+                .checkbox
+                  span.character-checkbox(onclick='showPassword()')
+                  span.label Show password
+                input#btn-login.btn.btn-custom.btn-lg.btn-block(type='submit', value='Log in')
+              a.forget(href='javascript:;', data-toggle='modal', data-target='.forget-modal') Forgot your password?
+              hr
+          // /.col-xs-12
+        // /.row
+      // /.container
+    .modal.fade.forget-modal(tabindex='-1', role='dialog', aria-labelledby='myForgetModalLabel', aria-hidden='true')
+      .modal-dialog.modal-sm
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal')
+              span(aria-hidden='true') ×
+              span.sr-only Close
+            h4.modal-title Recovery password
+          .modal-body
+            p Type your email account
+            input#recovery-email.form-control(type='email', name='recovery-email', autocomplete='off')
+          .modal-footer
+            button.btn.btn-default(type='button', data-dismiss='modal') Cancel
+            button.btn.btn-custom(type='button') Recovery
+        // /.modal-content
+      // /.modal-dialog
+    // /.modal
+    footer#footer
+      .container
+        .row
+          .col-xs-12
+            p Page © - 2014
+            p
+              | Powered by 
+              strong
+                a(href='http://www.facebook.com/tavo.qiqe.lucero', target='_blank') TavoQiqe

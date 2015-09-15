@@ -1,0 +1,30 @@
+doctype html
+html(ng-app='myApp')
+
+head
+    title AngularJS Basic Example
+    |         
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    |         
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    |         
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    | 
+    script(type='text/javascript', src='/javascripts/lib/angular.min.js')
+    | 
+    script(type='text/javascript', src='/javascripts/lib/angular-resource.min.js')
+    | 
+    script(type='text/javascript', src='/javascripts/lib/angular-route.min.js')
+    | 
+    script(type='text/javascript', src='/javascripts/lib/angular-sanitize.min.js')
+    | 
+    script(type='text/javascript', src='/javascripts/lib/angular-cookies.js')
+    |         
+    script(type='text/javascript', src='/javascripts/app/app.js', charset='UTF-8')
+    |         
+    script(type='text/javascript', src='/javascripts/app/controller/AppCtrl.js', charset='UTF-8')
+    |         
+    script(type='text/javascript', src='/javascripts/app/controller/LoginCtrl.js', charset='UTF-8')
+  body
+    .container(ng-view='')
+
